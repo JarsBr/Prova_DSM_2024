@@ -19,21 +19,16 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Inicializa o ListView
         listView = findViewById(R.id.listview)
 
-        // Carrega o array de strings de cadapio
         val cadapio = resources.getStringArray(R.array.cadapio)
 
-        // Configura o ArrayAdapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, cadapio)
         listView.adapter = adapter
 
-        // Define o ouvinte para cliques na lista
         listView.onItemClickListener = this
     }
 
-    // Método chamado quando um item da lista é clicado
     override fun onItemClick(parent: AdapterView<*>?, view: View?, idx: Int, id: Long) {
         val item = parent?.getItemAtPosition(idx).toString()
         if (item == "Bebidas") {
@@ -45,6 +40,5 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
             Toast.makeText(this, "Ainda não trabalhamos com mercearia", Toast.LENGTH_SHORT).show()
         }
     }
-
 }
 

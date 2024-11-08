@@ -13,7 +13,6 @@ class BebidaActivity : AppCompatActivity() {
         window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bebida)
-// Ação para exibir o botão de voltar na ActionBar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val imgBebida = intent.getIntExtra("imgBebida", 0)
         val nomeBebida = intent.getStringExtra("nomeBebida")
